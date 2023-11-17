@@ -1,0 +1,46 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+// Definizione della struttura Utente
+struct Utente {
+    string username;
+    string password;
+    string ruolo;
+};
+
+// Funzione per aggiungere un nuovo utente
+void aggiungiUtente(vector<Utente>& utenti, const Utente& nuovoUtente) {
+    utenti.push_back(nuovoUtente);
+    cout << "Utente aggiunto con successo." << endl;
+}
+
+// Funzione per visualizzare tutti gli utenti
+void visualizzaUtenti(const vector<Utente>& utenti) {
+    cout << "Elenco utenti:" << endl;
+    for (const Utente& utente : utenti) {
+        cout << "Username: " << utente.username << ", Ruolo: " << utente.ruolo << endl;
+    }
+}
+
+int main() {
+    cout << "Programma di gestione account utenti." << endl;
+
+    // Creazione di un vettore per memorizzare gli utenti
+    vector<Utente> utenti;
+
+    // Aggiunta di alcuni utenti di esempio
+    Utente utente1 = {"Alice", "password1", "Amministratore"};
+    Utente utente2 = {"Bob", "password2", "Utente Normale"};
+
+    // Aggiunta degli utenti al vettore
+    aggiungiUtente(utenti, utente1);
+    aggiungiUtente(utenti, utente2);
+
+    // Visualizzazione degli utenti
+    visualizzaUtenti(utenti);
+
+    return 0;
+}
