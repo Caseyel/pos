@@ -21,26 +21,4 @@ void aggiungiUtente(vector<Utente>& utenti, const Utente& nuovoUtente) {
 void visualizzaUtenti(const vector<Utente>& utenti) {
     cout << "Elenco utenti:" << endl;
     for (const Utente& utente : utenti) {
-        cout << "Username: " << utente.username << ", Ruolo: " << utente.ruolo << endl;
-    }
-}
-
-int main() {
-    cout << "Programma di gestione account utenti." << endl;
-
-    // Creazione di un vettore per memorizzare gli utenti
-    vector<Utente> utenti;
-
-    // Aggiunta di alcuni utenti di esempio
-    Utente utente1 = {"Alice", "password1", "Amministratore"};
-    Utente utente2 = {"Bob", "password2", "Utente Normale"};
-
-    // Aggiunta degli utenti al vettore
-    aggiungiUtente(utenti, utente1);
-    aggiungiUtente(utenti, utente2);
-
-    // Visualizzazione degli utenti
-    visualizzaUtenti(utenti);
-
-    return 0;
-}
+        cout << "Username: " << utente.username << ", Ruolo: " << utente.ruolo << endl
